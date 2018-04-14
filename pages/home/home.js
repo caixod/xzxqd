@@ -20,7 +20,12 @@ Page({
   _loadData:function(){
      var id = 1;
      //var data = home.getBannerData(id);此处是异步方法，无法用=直接赋值.需调用回调函数获取值
-     var data = home.getBannerData(id,this.callBack);
+     var data = home.getBannerData(id, (res) => { 
+       console.log(res);
+       this.setData({
+         'bannerArr':res
+       });
+     });
      
 
   },

@@ -1,6 +1,21 @@
 <!--pages/home/home.wxml-->
 <text>hahapages/home/home.wxml</text>
 <view>
-    <swiper></swiper>
+     <swiper indicator-dots="true" autoplay="true" class="swiper"	> 
+      <block wx:for="{{bannerArr}}">
+         <swiper-item> 
+           <image scr="{{item.image.url}}"></image> 
+         </swiper-item> 
+      </block>
+     </swiper> 
     <view></view>
 </view>
+
+<view>
+   <block wx:for="{{bannerArr}}">
+      <view>{{item.image.url}}</view>
+   </block>
+</view>
+<image src='http://pics.sc.chinaz.com/files/pic/pic9/201803/bpic6314.jpg'></image>
+
+
